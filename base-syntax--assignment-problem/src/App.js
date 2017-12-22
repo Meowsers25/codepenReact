@@ -5,6 +5,9 @@ import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
+  state = {
+    username: 'Super Katie'
+  }
   render() {
     return (
       <div className= "App">
@@ -21,9 +24,9 @@ class App extends Component {
           <li>Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets</li>
         </ol>
         <UserInput />
-        <UserOutput />
-        <UserOutput />
-        <UserOutput />
+        <UserOutput userName={this.state.username}/>
+        <UserOutput userName="Luna"/>
+        <UserOutput userName="Beatrice"/>
       </div>
     );
   }
